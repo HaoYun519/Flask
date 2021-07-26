@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Flask模板</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<img src="{{ url_for('static', filename='logo.jpg') }}">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+  <body>
+    <h2>
+        <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='avatar.png') }}">
+        {{ name }}'s Watchlist
+    </h2>
+    <header>
+      <div class="container">
+        <h1 class="logo">我的第一個Flask網站</h1>
+        <strong><nav>
+          <ul class="movie-list">>
+            <li><a href="{{ url_for('index') }}">Index</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+          <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='totoro.gif') }}">
+        </nav></strong>
+      </div>
+    </header>
+{% block content %}
+{% endblock %}
+</body>
+</html>
+<!-- #url_for() function 幫助我們連接index和about這兩個頁面，
+    並且自動複製導航欄的程式碼至個別頁面當中 -->

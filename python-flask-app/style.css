@@ -1,0 +1,19 @@
+body {
+    color: rgb(202, 2, 2);
+    margin: auto;
+    max-width: 580px;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+footer {
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* CSS
+建立一個名為 static的資料夾，在裡面建立template.css
+#Flask會從static裡面讀取 CSS, JavaScript, 圖片 */
